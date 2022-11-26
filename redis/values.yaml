@@ -1,0 +1,14 @@
+---
+redis:
+  enabled: true
+  auth:
+    enabled: true
+
+externalRedis:
+  auth:
+    enabled: true
+    existingSecret: ""
+    password: ""
+    userPasswordKey: ""
+  hostname: ""
+  port: 6379

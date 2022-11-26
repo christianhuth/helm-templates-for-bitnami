@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          env:
+            # Redis Settings
+            - name: REDIS_HOST
+              value: {{ include "mychart.redis.hostname" . | quote }}
+            - name: REDIS_PORT
+              value: {{ include "mychart.redis.port" . | quote }}
+            {{- if eq (include "mychart.redis.auth.enabled" .) "true" }}
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mychart.redis.secretName" . | quote }}
+                  key: {{ include "mychart.redis.userPasswordKey" . | quote }}
+            {{- end -}}
