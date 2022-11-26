@@ -8,3 +8,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     version: 17.3.11
     condition: redis.enabled
+maintainers:
+  - name: christianknell
+    email: christian@knell.it
+    url: https://knell.it
