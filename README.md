@@ -7,12 +7,12 @@ They are an implementation of the concepts I have explained in this [blog articl
 ## Variants
 
 - [Redis](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/redis)
-- One database
-  - MariaDB only
-  - MySQL only
-  - PostgreSQL only
-- Multiple databases
-  - MariaDB and MySQL
-  - MariaDB and PostgreSQL
-  - MySQL and PostgreSQL
-  - MariaDB, MySQL and PostgreSQL
+- [One database](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/)
+  - [MariaDB only]
+  - [MySQL only]
+  - [PostgreSQL only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/postgresql-only)
+- [Multiple databases]
+  - [MariaDB and MySQL]
+  - [MariaDB and PostgreSQL]
+  - [MySQL and PostgreSQL]
+  - [MariaDB, MySQL and PostgreSQL]
