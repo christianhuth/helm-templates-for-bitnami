@@ -1,0 +1,16 @@
+---
+postgresql:
+  enabled: true
+  auth:
+    database: mychart
+    password: mychart
+    username: mychart
+
+externalPostgresql:
+  database: mychart
+  existingSecret: ""
+  hostname: ""
+  password: mychart
+  port: 5432
+  username: mychart
+  userPasswordKey: ""

@@ -1,0 +1,14 @@
+---
+apiVersion: v2
+name: postgresql-dependency
+type: library
+version: 1.0.0
+dependencies:
+  - name: postgresql
+    repository: https://charts.bitnami.com/bitnami
+    version: 12.1.2
+    condition: postgresql.enabled
+maintainers:
+  - name: christianknell
+    email: christian@knell.it
+    url: https://knell.it
