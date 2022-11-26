@@ -8,11 +8,11 @@ They are an implementation of the concepts I have explained in this [blog articl
 
 - [Redis](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/redis)
 - [One database](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/)
-  - [MariaDB only]
-  - [MySQL only]
+  - [MariaDB only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/mariadb-only)
+  - [MySQL only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/mysql-only)
   - [PostgreSQL only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/postgresql-only)
-- [Multiple databases]
-  - [MariaDB and MySQL]
-  - [MariaDB and PostgreSQL]
-  - [MySQL and PostgreSQL]
-  - [MariaDB, MySQL and PostgreSQL]
+- [Multiple databases]()
+  - [MariaDB and MySQL]()
+  - [MariaDB and PostgreSQL]()
+  - [MySQL and PostgreSQL]()
+  - [MariaDB, MySQL and PostgreSQL]()
