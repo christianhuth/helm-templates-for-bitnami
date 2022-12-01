@@ -7,10 +7,11 @@ postgresql:
     username: mychart
 
 externalPostgresql:
-  database: mychart
-  existingSecret: ""
+  auth:
+    database: mychart
+    existingSecret: ""
+    password: mychart
+    username: mychart
+    userPasswordKey: ""
   hostname: ""
-  password: mychart
   port: 5432
-  username: mychart
-  userPasswordKey: ""
