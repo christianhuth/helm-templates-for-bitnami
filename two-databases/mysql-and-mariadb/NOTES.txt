@@ -1,0 +1,6 @@
+{{- if and (.Values.mysql.enabled) (.Values.mariadb.enabled) }}
+! WARNING !
+  You have defined the usage of multiple database dependencies using mysql.enabled and mariadb.enabled!
+  This Helm chart will use MySQL as the primary database.
+! WARNING !
+{{- end }}
