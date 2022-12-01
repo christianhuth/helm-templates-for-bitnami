@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          env:
+            # Memcached Settings
+            - name: MEMCACHED_HOST
+              value: {{ include "mychart.memcached.hostname" . | quote }}
+            - name: MEMCACHED_PORT
+              value: {{ include "mychart.memcached.port" . | quote }}
+            {{- if eq (include "mychart.memcached.auth.enabled" .) "true" }}
+            - name: MEMCACHED_USERNAME
+              value: {{ include "mychart.memcached.username" . | quote }}
+            - name: MEMCACHED_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mychart.memcached.secretName" . | quote }}
+                  key: {{ include "mychart.memcached.userPasswordKey" . | quote }}
+            {{- end -}}

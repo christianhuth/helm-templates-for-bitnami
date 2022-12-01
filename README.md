@@ -6,6 +6,7 @@ They are an implementation of the concepts I have explained in this [blog articl
 
 ## Variants [WIP]
 
+- [Memcached](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/memcached)
 - [Redis](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/redis)
 - [One database](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/)
   - [MariaDB only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/mariadb-only)

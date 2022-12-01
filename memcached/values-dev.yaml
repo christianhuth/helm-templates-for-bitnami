@@ -1,0 +1,12 @@
+---
+memcached:
+  enabled: false
+
+externalMemcached:
+  auth:
+    existingSecret: ""
+    password: mypass
+    username: myuser
+    userPasswordKey: ""
+  hostname: myhost
+  port: 3333

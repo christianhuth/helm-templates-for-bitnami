@@ -1,0 +1,17 @@
+---
+memcached:
+  enabled: true
+  auth:
+    enabled: true
+    password: mychart
+    username: mychart
+
+externalMemcached:
+  auth:
+    enabled: true
+    existingSecret: ""
+    password: mychart
+    username: mychart
+    userPasswordKey: ""
+  hostname: mychart
+  port: 11211

@@ -1,0 +1,14 @@
+---
+apiVersion: v2
+name: memcached-dependency
+type: application
+version: 1.0.0
+dependencies:
+  - name: memcached
+    repository: https://charts.bitnami.com/bitnami
+    version: 6.3.1
+    condition: memcached.enabled
+maintainers:
+  - name: christianknell
+    email: christian@knell.it
+    url: https://knell.it
