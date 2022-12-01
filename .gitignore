@@ -1,0 +1,38 @@
+# Created by https://www.toptal.com/developers/gitignore/api/helm,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=helm,visualstudiocode
+
+### Helm ###
+# Chart dependencies
+redis/charts/*
+redis/Chart.lock
+redis/values-dev.yaml
+one-database/**/charts/*
+one-database/**/Chart.lock
+one-database/**/values-dev.yaml
+two-databases/**/charts/*
+two-databases/**/Chart.lock
+two-databases/**/values-dev.yaml
+three-databases/**/charts/*
+three-databases/**/Chart.lock
+three-databases/**/values-dev.yaml
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# Support for Project snippet scope
+!.vscode/*.code-snippets
+
+# End of https://www.toptal.com/developers/gitignore/api/helm,visualstudiocode
