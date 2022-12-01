@@ -5,7 +5,7 @@ memcached:
 externalMemcached:
   auth:
     enabled: true
-    existingSecret: ""
+    existingSecret: mysec
     password: mypass
     username: myuser
     userPasswordKey: mykey

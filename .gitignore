@@ -3,18 +3,9 @@
 
 ### Helm ###
 # Chart dependencies
-redis/charts/*
-redis/Chart.lock
-redis/values-dev.yaml
-one-database/**/charts/*
-one-database/**/Chart.lock
-one-database/**/values-dev.yaml
-two-databases/**/charts/*
-two-databases/**/Chart.lock
-two-databases/**/values-dev.yaml
-three-databases/**/charts/*
-three-databases/**/Chart.lock
-three-databases/**/values-dev.yaml
+**/charts/*
+**/Chart.lock
+**/values-dev.yaml
 
 ### VisualStudioCode ###
 .vscode/*
