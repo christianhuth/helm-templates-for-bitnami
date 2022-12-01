@@ -16,7 +16,7 @@ They are an implementation of the concepts I have explained in this [blog articl
   - [MariaDB and MySQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mariadb-and-mysql)
   - [MariaDB and PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mariadb-and-postgresql)
   - [MySQL and MariaDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mysql-and-mariadb)
-  - [MySQL and PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mysql-and-postgresql) [tbd]
+  - [MySQL and PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mysql-and-postgresql)
   - [PostgreSQL and MariaDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/postgresql-and-mariadb)
   - [PostgreSQL and MySQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/postgresql-and-mysql) [tbd]
 - [Three databases](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/three-databases/) [tbd]

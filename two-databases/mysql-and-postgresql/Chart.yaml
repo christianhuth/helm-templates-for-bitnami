@@ -1,0 +1,18 @@
+---
+apiVersion: v2
+name: mysql-and-postgresql-dependency
+type: library
+version: 1.0.0
+dependencies:
+  - name: mysql
+    repository: https://charts.bitnami.com/bitnami
+    version: 9.4.4
+    condition: mysql.enabled
+  - name: postgresql
+    repository: https://charts.bitnami.com/bitnami
+    version: 12.1.2
+    condition: postgresql.enabled
+maintainers:
+  - name: christianknell
+    email: christian@knell.it
+    url: https://knell.it
