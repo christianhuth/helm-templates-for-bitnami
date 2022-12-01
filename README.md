@@ -4,7 +4,7 @@ This repository contains Templates and Named Templates for using Bitnami Charts 
 
 They are an implementation of the concepts I have explained in this [blog article](https://blog.knell.it/best-way-to-use-bitnamis-database-helm-charts/).
 
-## Variants [WIP]
+## Variants
 
 - [Memcached](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/memcached)
 - [Redis](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/redis)
