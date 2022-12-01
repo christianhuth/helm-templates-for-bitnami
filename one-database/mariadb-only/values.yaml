@@ -1,0 +1,17 @@
+---
+mariadb:
+  enabled: true
+  auth:
+    database: mychart
+    password: mychart
+    username: mychart
+
+externalMariadb:
+  auth:
+    database: mychart
+    existingSecret: ""
+    password: mychart
+    username: mychart
+    userPasswordKey: ""
+  hostname: ""
+  port: 3306

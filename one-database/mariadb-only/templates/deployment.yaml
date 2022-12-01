@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          env:
+            # Database Settings
+            - name: DB_HOST
+              value: {{ include "mychart.mariadb.hostname" . | quote }}
+            - name: DB_PORT
+              value: {{ include "mychart.mariadb.port" . | quote }}
+            - name: DB_NAME
+              value: {{ include "mychart.mariadb.database" . | quote }}
+            - name: DB_USER
+              value: {{ include "mychart.mariadb.username" . | quote }}
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mychart.mariadb.secretName" . | quote }}
+                  key: {{ include "mychart.mariadb.userPasswordKey" . | quote }}

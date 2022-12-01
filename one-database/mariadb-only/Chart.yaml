@@ -1,0 +1,14 @@
+---
+apiVersion: v2
+name: mariadb-dependency
+type: application
+version: 1.0.0
+dependencies:
+  - name: mariadb
+    repository: https://charts.bitnami.com/bitnami
+    version: 11.4.0
+    condition: mariadb.enabled
+maintainers:
+  - name: christianknell
+    email: christian@knell.it
+    url: https://knell.it
