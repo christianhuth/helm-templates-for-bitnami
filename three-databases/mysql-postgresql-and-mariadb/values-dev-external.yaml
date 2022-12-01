@@ -1,0 +1,20 @@
+---
+mysql:
+  enabled: false
+
+postgresql:
+  enabled: false
+
+mariadb:
+  enabled: false
+
+externalDatabase:
+  auth:
+    database: mydb
+    existingSecret: mysec
+    password: mypass
+    username: myuser
+    userPasswordKey: mykey
+  hostname: myhost
+  port: 3333
+  type: mysql
