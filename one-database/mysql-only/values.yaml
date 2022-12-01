@@ -1,0 +1,17 @@
+---
+mysql:
+  enabled: true
+  auth:
+    database: mychart
+    password: mychart
+    username: mychart
+
+externalMysql:
+  auth:
+    database: mychart
+    existingSecret: ""
+    password: mychart
+    username: mychart
+    userPasswordKey: ""
+  hostname: ""
+  port: 3306

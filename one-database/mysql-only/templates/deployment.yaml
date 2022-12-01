@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          env:
+            # Database Settings
+            - name: DB_HOST
+              value: {{ include "mychart.mysql.hostname" . | quote }}
+            - name: DB_PORT
+              value: {{ include "mychart.mysql.port" . | quote }}
+            - name: DB_NAME
+              value: {{ include "mychart.mysql.database" . | quote }}
+            - name: DB_USER
+              value: {{ include "mychart.mysql.username" . | quote }}
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mychart.mysql.secretName" . | quote }}
+                  key: {{ include "mychart.mysql.userPasswordKey" . | quote }}

@@ -1,0 +1,14 @@
+---
+apiVersion: v2
+name: mysql-dependency
+type: application
+version: 1.0.0
+dependencies:
+  - name: mysql
+    repository: https://charts.bitnami.com/bitnami
+    version: 9.4.4
+    condition: mysql.enabled
+maintainers:
+  - name: christianknell
+    email: christian@knell.it
+    url: https://knell.it
