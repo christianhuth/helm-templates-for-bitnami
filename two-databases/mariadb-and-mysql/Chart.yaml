@@ -1,0 +1,18 @@
+---
+apiVersion: v2
+name: mariadb-and-mysql-dependency
+type: application
+version: 1.0.0
+dependencies:
+  - name: mariadb
+    repository: https://charts.bitnami.com/bitnami
+    version: 11.4.0
+    condition: mariadb.enabled
+  - name: mysql
+    repository: https://charts.bitnami.com/bitnami
+    version: 9.4.4
+    condition: mysql.enabled
+maintainers:
+  - name: christianknell
+    email: christian@knell.it
+    url: https://knell.it

@@ -12,8 +12,8 @@ They are an implementation of the concepts I have explained in this [blog articl
   - [MariaDB only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/mariadb-only)
   - [MySQL only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/mysql-only)
   - [PostgreSQL only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/postgresql-only)
-- [Two databases](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/) [tbd]
-  - [MariaDB and MySQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mariadb-and-mysql) [tbd]
+- [Two databases](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/)
+  - [MariaDB and MySQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mariadb-and-mysql)
   - [MariaDB and PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mariadb-and-postgresql) [tbd]
   - [MySQL and MariaDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mysql-and-mariadb) [tbd]
   - [MySQL and PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-databases/mysql-and-postgresql) [tbd]
