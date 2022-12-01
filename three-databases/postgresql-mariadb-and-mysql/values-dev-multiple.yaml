@@ -1,0 +1,9 @@
+---
+postgresql:
+  enabled: false
+
+mariadb:
+  enabled: true
+
+mysql:
+  enabled: true
