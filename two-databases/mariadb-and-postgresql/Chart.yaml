@@ -1,6 +1,6 @@
 ---
 apiVersion: v2
-name: mariadb-and-mysql-dependency
+name: mariadb-and-postgresql-dependency
 type: library
 version: 1.0.0
 dependencies:

@@ -22,4 +22,4 @@ externalDatabase:
     userPasswordKey: ""
   hostname: ""
   port: 3306
-  type: ""
+  type: mysql
