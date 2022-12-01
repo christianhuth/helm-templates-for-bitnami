@@ -12,6 +12,6 @@ externalMysql:
     existingSecret: ""
     password: mychart
     username: mychart
-    userPasswordKey: ""
+    userPasswordKey: mykey
   hostname: ""
   port: 3306

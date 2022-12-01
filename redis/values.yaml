@@ -3,6 +3,7 @@ redis:
   enabled: true
   auth:
     enabled: true
+    password: mychart
 
 externalRedis:
   auth:

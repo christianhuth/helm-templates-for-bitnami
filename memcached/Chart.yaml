@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: memcached-dependency
-type: application
+type: type
 version: 1.0.0
 dependencies:
   - name: memcached

@@ -4,9 +4,10 @@ memcached:
 
 externalMemcached:
   auth:
+    enabled: true
     existingSecret: ""
     password: mypass
     username: myuser
-    userPasswordKey: ""
+    userPasswordKey: mykey
   hostname: myhost
   port: 3333
