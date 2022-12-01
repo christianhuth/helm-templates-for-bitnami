@@ -1,0 +1,6 @@
+{{- if and (.Values.postgresql.enabled) (.Values.mysql.enabled) }}
+! WARNING !
+  You have defined the usage of multiple database dependencies using postgresql.enabled and mysql.enabled!
+  This Helm chart will use PostgreSQL as the primary database.
+! WARNING !
+{{- end }}
