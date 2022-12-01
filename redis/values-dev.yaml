@@ -1,0 +1,12 @@
+---
+redis:
+  enabled: false
+
+externalRedis:
+  auth:
+    enabled: true
+    existingSecret: mysec
+    password: mypass
+    userPasswordKey: mykey
+  hostname: myhost
+  port: 3333
