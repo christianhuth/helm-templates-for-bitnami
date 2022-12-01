@@ -1,0 +1,6 @@
+{{- if and (.Values.postgresql.enabled) (.Values.mariadb.enabled) }}
+! WARNING !
+  You have defined the usage of multiple database dependencies using postgresql.enabled and mariadb.enabled!
+  This Helm chart will use PostgreSQL as the primary database.
+! WARNING !
+{{- end }}
