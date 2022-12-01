@@ -1,0 +1,6 @@
+{{- if or (and (.Values.mariadb.enabled) (.Values.mysql.enabled)) (and (.Values.mariadb.enabled) (.Values.postgresql.enabled)) (and (.Values.mysql.enabled) (.Values.postgresql.enabled)) }}
+! WARNING !
+  You have defined the usage of multiple database dependencies using mariadb.enabled, mysql.enabled and postgresql.enabled!
+  This Helm chart will use the databases in this order: MariaDB, MySQL and PostgreSQL.
+! WARNING !
+{{- end }}
