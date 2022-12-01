@@ -1,5 +1,5 @@
 {{/*
-Return the hostname of the PostgreSQL to use
+Return the hostname of the postgresql to use
 */}}
 {{- define "mychart.postgresql.hostname" -}}
   {{- if .Values.postgresql.enabled -}}
@@ -43,7 +43,7 @@ Return the name for the user to use
 {{- end -}}
 
 {{/*
-Get the name of the secret containing the postgresql password
+Get the name of the secret containing the postgresql user password
 */}}
 {{- define "mychart.postgresql.secretName" -}}
   {{- if .Values.postgresql.enabled -}}
@@ -56,7 +56,7 @@ Get the name of the secret containing the postgresql password
 {{- end -}}
 
 {{/*
-Get the user-password key for the postgres password
+Get the user-password key for the postgresql user password
 */}}
 {{- define "mychart.postgresql.userPasswordKey" -}}
   {{- if .Values.postgresql.enabled -}}
