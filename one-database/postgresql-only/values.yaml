@@ -1,17 +1,34 @@
 ---
+# -- Values for including the subchart PostgreSQL™ from Bitnami
 postgresql:
+  # -- enable PostgreSQL™ subchart from Bitnami
   enabled: true
+  ## Authentication parameters
   auth:
+    # -- Name for a custom database to create
     database: mychart
+    # -- Name of existing secret to use for PostgreSQL credentials
+    existingSecret: ""
+    # -- Password for the custom user to create. Ignored if postgresql.auth.existingSecret is provided
     password: mychart
+    # -- Name for a custom user to create
     username: mychart
 
+# -- Values for an existing PostgreSQL database
 externalPostgresql:
+  ## Authentication parameters
   auth:
+    # -- Name of the database to use
     database: mychart
+    # -- Name of existing secret to use for PostgreSQL credentials
     existingSecret: ""
+    # -- Password to use
     password: mychart
+    # -- Name of the user to use
     username: mychart
+    # -- Key in the secret containing the password
     userPasswordKey: ""
+  # -- Hostname of the PostgreSQL database
   hostname: ""
+  # -- Port used to connect to PostgreSQL database
   port: 5432
