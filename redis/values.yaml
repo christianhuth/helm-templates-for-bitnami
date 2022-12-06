@@ -1,15 +1,24 @@
 ---
 redis:
+  # -- enable Redis&reg; subchart from Bitnami
   enabled: true
   auth:
+    # -- Enable password authentication
     enabled: true
+    # -- Redis&reg; password
     password: mychart
 
 externalRedis:
   auth:
+    # -- if authentication should be used with external Redis&reg;
     enabled: true
+    # -- Name of existing secret to use for Redis&reg; credentials
     existingSecret: ""
+    # -- Password to use
     password: ""
+    # -- Key in the secret containing the password
     userPasswordKey: ""
+  # -- Hostname of Redis&reg;
   hostname: ""
+  # -- Port used to connect to Redis
   port: 6379

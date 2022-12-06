@@ -1,9 +1,7 @@
 ---
-# -- Values for including the subchart PostgreSQL™ from Bitnami
 postgresql:
   # -- enable PostgreSQL™ subchart from Bitnami
   enabled: true
-  ## Authentication parameters
   auth:
     # -- Name for a custom database to create
     database: mychart
@@ -14,9 +12,7 @@ postgresql:
     # -- Name for a custom user to create
     username: mychart
 
-# -- Values for an existing PostgreSQL database
 externalPostgresql:
-  ## Authentication parameters
   auth:
     # -- Name of the database to use
     database: mychart
