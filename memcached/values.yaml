@@ -1,17 +1,30 @@
 ---
 memcached:
+  # -- enable Memcached subchart from Bitnami
   enabled: true
   auth:
+    # -- enable Authentication for Memcached
     enabled: true
+    # -- Name of existing secret to use for Memcached credentials
+    existingPasswordSecret: ""
+    # -- Password for the custom user to create. Ignored if memcached.auth.existingSecret is provided
     password: mychart
+    # -- Name for a custom user to create
     username: mychart
 
 externalMemcached:
   auth:
+    # -- use Authentication for Memcached
     enabled: true
+    # -- Name of existing secret to use for Memcached credentials
     existingSecret: ""
+    # -- Password to use
     password: mychart
+    # -- Name of the user to use
     username: mychart
+    # -- Key in the secret containing the password
     userPasswordKey: ""
+  # -- Hostname of the Memcached host
   hostname: mychart
+  # -- Port used to connect to Memcached
   port: 11211
