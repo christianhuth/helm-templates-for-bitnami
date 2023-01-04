@@ -1,25 +1,45 @@
 ---
 mariadb:
+  # -- enable MariaDB™ subchart from Bitnami
   enabled: true
   auth:
+    # -- Name for a custom database to create
     database: mychart
+    # -- Name of existing secret to use for MariaDB credentials
+    existingSecret: ""
+    # -- Password for the custom user to create. Ignored if mariadb.auth.existingSecret is provided
     password: mychart
+    # -- Name for a custom user to create
     username: mychart
 
 mysql:
+  # -- enable MySQL™ subchart from Bitnami
   enabled: false
   auth:
+    # -- Name for a custom database to create
     database: mychart
+    # -- Name of existing secret to use for MySQL credentials
+    existingSecret: ""
+    # -- Password for the custom user to create. Ignored if mysql.auth.existingSecret is provided
     password: mychart
+    # -- Name for a custom user to create
     username: mychart
 
 externalDatabase:
   auth:
+    # -- Name of the database to use
     database: mychart
+    # -- Name of existing secret to use for database credentials
     existingSecret: ""
+    # -- Password to use
     password: mychart
+    # -- Name of the user to use
     username: mychart
+    # -- Key in the secret containing the password
     userPasswordKey: ""
+  # -- Hostname of the database
   hostname: ""
+  # -- Port used to connect to database
   port: 3306
+  # -- Type of database
   type: mariadb
