@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          env:
+            # MongoDB Settings
+            - name: MONGODB_HOST
+              value: {{ include "mychart.mongodb.hostname" . | quote }}
+            - name: MONGODB_PORT
+              value: {{ include "mychart.mongodb.port" . | quote }}
+            {{- if (include "mychart.mongodb.databases" .) }}
+            - name: MONGODB_DATABASES
+              value: {{ include "mychart.mongodb.databases" . | quote }}
+            {{- end }}
+            {{- if eq (include "mychart.mongodb.auth.enabled" .) "true" -}}
+            {{- if and (include "mychart.mongodb.usernames" .) (include "mychart.mongodb.passwords" .) }}
+            - name: MONGODB_USERNAMES
+              value: {{ include "mychart.mongodb.usernames" . | quote }}
+            - name: MONGODB_PASSWORDS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mychart.mongodb.secretName" . | quote }}
+                  key: mongodb-passwords
+            {{- end }}
+            - name: MONGODB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mychart.mongodb.secretName" . | quote }}
+                  key: mongodb-root-password
+            - name: MONGODB_ROOT_USERNAME
+              value: {{ include "mychart.mongodb.rootUsername" . | quote }}
+            {{- end -}}

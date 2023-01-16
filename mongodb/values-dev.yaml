@@ -1,0 +1,15 @@
+---
+mongodb:
+  enabled: false
+
+externalMongoDB:
+  auth:
+    databases:
+      - mydb
+      - mydb2
+    usernames:
+      - knellcn
+      - knellcn2
+    passwords:
+      - test1234
+      - test12345

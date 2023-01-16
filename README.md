@@ -1,12 +1,13 @@
 # Templates and Named Templates for using Bitnami Charts
 
-This repository contains Templates and Named Templates for using Bitnami Charts like [MariaDB](https://artifacthub.io/packages/helm/bitnami/mariadb), [MySQL](https://artifacthub.io/packages/helm/bitnami/mysql), [PostgreSQL](https://artifacthub.io/packages/helm/bitnami/postgresql), [Memcached](https://artifacthub.io/packages/helm/bitnami/memcached) and [Redis](https://artifacthub.io/packages/helm/bitnami/redis) as a dependency in your own Helm Charts.
+This repository contains Templates and Named Templates for using Bitnami Charts like [MariaDB](https://artifacthub.io/packages/helm/bitnami/mariadb), [MySQL](https://artifacthub.io/packages/helm/bitnami/mysql), [PostgreSQL](https://artifacthub.io/packages/helm/bitnami/postgresql), [Memcached](https://artifacthub.io/packages/helm/bitnami/memcached), [MongoDB](https://artifacthub.io/packages/helm/bitnami/mongodb) and [Redis](https://artifacthub.io/packages/helm/bitnami/redis) as a dependency in your own Helm Charts.
 
 They are an implementation of the concepts I have explained in this [blog article](https://blog.knell.it/best-way-to-use-bitnamis-database-helm-charts/).
 
 ## Variants
 
 - [Memcached](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/memcached)
+- [MongoDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/mongodb)
 - [Redis](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/redis)
 - [One database](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/)
   - [MariaDB only](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-database/mariadb-only)

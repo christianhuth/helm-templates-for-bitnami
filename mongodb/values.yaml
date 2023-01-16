@@ -1,0 +1,40 @@
+---
+mongodb:
+  # -- enable MongoDB(®) subchart from Bitnami
+  enabled: true
+  auth:
+    # -- enable Authentication for MongoDB(®)
+    enabled: true
+    # -- List of custom databases to be created during the initialization
+    databases: []
+    # -- Name of existing secret to use for MongoDB(®) credentials (keys: mongodb-passwords, mongodb-root-password, mongodb-metrics-password, mongodb-replica-set-key)
+    existingSecret: ""
+    # -- List of passwords for the custom users set at auth.usernames
+    passwords: []
+    # -- MongoDB(®) root password
+    rootPassword: ""
+    # -- MongoDB(®) root user
+    rootUser: root
+    # -- Name of the user to use
+    usernames: []
+
+externalMongoDB:
+  auth:
+    # -- use Authentication for MongoDB(®)
+    enabled: true
+    # -- List of custom databases to be created during the initialization
+    databases: []
+    # -- Name of existing secret to use for MongoDB(®) credentials
+    existingSecret: ""
+    # -- List of passwords for the custom users set at auth.usernames
+    passwords: []
+    # -- MongoDB(®) root password
+    rootPassword: ""
+    # -- MongoDB(®) root user
+    rootUser: root
+    # -- Name of the user to use
+    usernames: []
+  # -- Hostname of the MongoDB(®) host
+  hostname: mychart
+  # -- Port used to connect to MongoDB(®)
+  port: 27017

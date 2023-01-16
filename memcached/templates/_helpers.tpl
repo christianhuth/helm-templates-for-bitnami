@@ -46,7 +46,7 @@ Return memcached service port
 {{- end -}}
 
 {{/*
-Get the user-password key for the memcached password
+Define if authentication is activated
 */}}
 {{- define "mychart.memcached.auth.enabled" -}}
   {{- if or (and (.Values.memcached.enabled) (.Values.memcached.auth.enabled)) (and (not .Values.memcached.enabled) (.Values.externalMemcached.auth.enabled)) -}}
