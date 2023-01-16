@@ -6,13 +6,13 @@ They are an implementation of the concepts I have explained in this [blog articl
 
 ## Variants
 
-- [Memcached](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/memcached)
-- [MongoDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/mongodb)
-- [Redis](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/redis)
 - [One dependency](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/)
-  - [MariaDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/mariadb-only)
-  - [MySQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/mysql-only)
-  - [PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/postgresql-only)
+  - [MariaDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/mariadb)
+  - [Memcached](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/memcached)
+  - [MongoDB](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/mongodb)
+  - [MySQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/mysql)
+  - [PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/postgresql)
+  - [Redis](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/one-dependency/redis)
 - [Two dependencies](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-dependencies/)
   - [MariaDB and MySQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-dependencies/mariadb-and-mysql)
   - [MariaDB and PostgreSQL](https://github.com/christianknell/helm-templates-for-bitnami/tree/main/two-dependencies/mariadb-and-postgresql)
