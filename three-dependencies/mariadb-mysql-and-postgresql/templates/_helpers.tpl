@@ -32,7 +32,7 @@ Return the hostname of the database to use
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (include "mysql.primary.fullname" .Subcharts.mysql) -}}
   {{- else if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.primary.fullname" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.primary.fullname" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl .Values.externalDatabase.hostname $) -}}
   {{- end -}}
@@ -47,7 +47,7 @@ Return database service port
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (tpl (toString .Values.mysql.primary.service.ports.mysql) $) -}}
   {{- else if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.service.port" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.service.port" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl (toString .Values.externalDatabase.port) $) -}}
   {{- end -}}
@@ -62,7 +62,7 @@ Return the name for the database to use
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (tpl .Values.mysql.auth.database $) -}}
   {{- else if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.database" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.database" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl .Values.externalDatabase.auth.database $) -}}
   {{- end -}}
@@ -77,7 +77,7 @@ Return the name for the user to use
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (tpl .Values.mysql.auth.username $) -}}
   {{- else if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.username" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.username" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl .Values.externalDatabase.auth.username $) -}}
   {{- end -}}
@@ -92,7 +92,7 @@ Get the name of the secret containing the database user password
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (include "mysql.secretName" .Subcharts.mysql) -}}
   {{- else if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.secretName" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.secretName" .Subcharts.postgresql) -}}
   {{- else if .Values.externalDatabase.auth.existingSecret -}}
     {{- printf "%s" (tpl .Values.externalDatabase.auth.existingSecret $) -}}
   {{- else -}}
@@ -109,7 +109,7 @@ Get the user-password key for the database password
   {{- else if .Values.mysql.enabled -}}
     {{- "mysql-password" -}}
   {{- else if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.userPasswordKey" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.userPasswordKey" .Subcharts.postgresql) -}}
   {{- else if .Values.externalDatabase.auth.userPasswordKey -}}
     {{- printf "%s" (tpl .Values.externalDatabase.auth.userPasswordKey $) -}}
   {{- else -}}

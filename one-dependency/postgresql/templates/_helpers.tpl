@@ -28,7 +28,7 @@ Return the hostname of the postgresql to use
 */}}
 {{- define "mychart.postgresql.hostname" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.primary.fullname" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.primary.fullname" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl .Values.externalPostgresql.hostname $) -}}
   {{- end -}}
@@ -39,7 +39,7 @@ Return postgresql service port
 */}}
 {{- define "mychart.postgresql.port" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.service.port" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.service.port" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl (toString .Values.externalPostgresql.port) $) -}}
   {{- end -}}
@@ -50,7 +50,7 @@ Return the name for the database to use
 */}}
 {{- define "mychart.postgresql.database" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.database" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.database" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl .Values.externalPostgresql.auth.database $) -}}
   {{- end -}}
@@ -61,7 +61,7 @@ Return the name for the user to use
 */}}
 {{- define "mychart.postgresql.username" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.username" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.username" .Subcharts.postgresql) -}}
   {{- else -}}
     {{- printf "%s" (tpl .Values.externalPostgresql.auth.username $) -}}
   {{- end -}}
@@ -72,7 +72,7 @@ Get the name of the secret containing the postgresql user password
 */}}
 {{- define "mychart.postgresql.secretName" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.secretName" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.secretName" .Subcharts.postgresql) -}}
   {{- else if .Values.externalPostgresql.auth.existingSecret -}}
     {{- printf "%s" (tpl .Values.externalPostgresql.auth.existingSecret $) -}}
   {{- else -}}
@@ -85,7 +85,7 @@ Get the user-password key for the postgresql user password
 */}}
 {{- define "mychart.postgresql.userPasswordKey" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.userPasswordKey" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.userPasswordKey" .Subcharts.postgresql) -}}
   {{- else if .Values.externalPostgresql.auth.userPasswordKey -}}
     {{- printf "%s" (tpl .Values.externalPostgresql.auth.userPasswordKey $) -}}
   {{- else -}}

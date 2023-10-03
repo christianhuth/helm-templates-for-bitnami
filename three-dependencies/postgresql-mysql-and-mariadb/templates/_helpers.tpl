@@ -28,7 +28,7 @@ Return the hostname of the database to use
 */}}
 {{- define "mychart.database.hostname" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.primary.fullname" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.primary.fullname" .Subcharts.postgresql) -}}
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (include "mysql.primary.fullname" .Subcharts.mysql) -}}
   {{- else if .Values.mariadb.enabled -}}
@@ -43,7 +43,7 @@ Return database service port
 */}}
 {{- define "mychart.database.port" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.service.port" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.service.port" .Subcharts.postgresql) -}}
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (tpl (toString .Values.mysql.primary.service.ports.mysql) $) -}}
   {{- else if .Values.mariadb.enabled -}}
@@ -58,7 +58,7 @@ Return the name for the database to use
 */}}
 {{- define "mychart.database.database" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.database" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.database" .Subcharts.postgresql) -}}
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (tpl .Values.mysql.auth.database $) -}}
   {{- else if .Values.mariadb.enabled -}}
@@ -73,7 +73,7 @@ Return the name for the user to use
 */}}
 {{- define "mychart.database.username" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.username" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.username" .Subcharts.postgresql) -}}
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (tpl .Values.mysql.auth.username $) -}}
   {{- else if .Values.mariadb.enabled -}}
@@ -88,7 +88,7 @@ Get the name of the secret containing the database user password
 */}}
 {{- define "mychart.database.secretName" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.secretName" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.secretName" .Subcharts.postgresql) -}}
   {{- else if .Values.mysql.enabled -}}
     {{- printf "%s" (include "mysql.secretName" .Subcharts.mysql) -}}
   {{- else if .Values.mariadb.enabled -}}
@@ -105,7 +105,7 @@ Get the user-password key for the database password
 */}}
 {{- define "mychart.database.userPasswordKey" -}}
   {{- if .Values.postgresql.enabled -}}
-    {{- printf "%s" (include "postgresql.userPasswordKey" .Subcharts.postgresql) -}}
+    {{- printf "%s" (include "postgresql.v1.userPasswordKey" .Subcharts.postgresql) -}}
   {{- else if .Values.mysql.enabled -}}
     {{- "mysql-password" -}}
   {{- else if .Values.mariadb.enabled -}}
